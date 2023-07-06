@@ -1,16 +1,18 @@
 
-export default function Card({ qData, qLength }){
+export default function Card({ qData, qLength, handleAnswer }){
     
     return (
         <div className="quiz-card">
-            <p>{qData.id + 1}/{qLength}</p>
+            <p>{qData.id}/{qLength}</p>
             <h3>{qData.question}</h3>
             <ul>
                 {
                     qData.options.map(
                         (element, index)=>{
                             return(
-                                <li key={index}>{element.answer}</li>
+                                <li key={index}
+                                onClick={() => {handleAnswer(element.isCorrect)}}
+                                >{element.answer}</li>
                             )
                         }
                     )

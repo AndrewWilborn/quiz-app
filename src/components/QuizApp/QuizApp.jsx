@@ -11,6 +11,22 @@ export default function QuizApp() {
     const [score, setScore] = useState(0);
     const [showResult, setShowResult] = useState(false);
 
+    const handleAnswer = (isCorrect) => {
+        isCorrect && setScore(score+1)
+
+        if(qId < qLength-1){
+            setQId(qId + 1);
+        } else {
+            setShowResult(true);
+        }
+    };
+
+    const handleReset = () => {
+        setQId(0);
+        setScore(0);
+        setShowResult(false);
+    };
+
     return (
         <>
             {
@@ -18,10 +34,12 @@ export default function QuizApp() {
                     ? <Card 
                         qData={data[qId]}
                         qLength={qLength}
+                        handleAnswer={handleAnswer}
                     />
                     : <Result 
                         score={score}
-                        data={data}
+                        qLength={qLength}
+                        handleReset={handleReset}
                     />
             }
         </>
