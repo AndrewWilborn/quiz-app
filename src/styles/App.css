@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,300;1,400;1,700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+h1, h2, h3, p, li {
+    font-family: 'Heebo','Helvetica', 'sans-serif';
+}

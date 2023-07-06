@@ -2,3 +2,39 @@
     border: 2px solid red;
     
 }
+
+.quiz-card h2 {
+    font-size: clamp(2.2rem, 4vw, 2.9rem);
+}
+
+.quiz-card h2 span {
+    font-size: calc(1.8rem + 1vw);
+}
+
+.quiz-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;;
+}
+
+.quiz-card ul {
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-card li {
+    font-size: 100%;
+    list-style: none;
+    padding: 0.7rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.quiz-card li:hover{
+    font-size: 115%;
+    background-image: linear-gradient(
+        180deg,
+        aqua,
+        rgb(129, 91, 242)
+    );
+    transition: all 0.2s ease-in-out;
+}

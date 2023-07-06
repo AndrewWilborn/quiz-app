@@ -1,10 +1,11 @@
+const imageUri = process.env.PUBLIC_URL + '/images/'
 
 export default function Card({ qData, qLength, handleAnswer }){
     
     return (
         <div className="quiz-card">
-            <p>{qData.id}/{qLength}</p>
-            <h3>{qData.question}</h3>
+            <h2>Guess the Movie <span>({qData.id}/{qLength})</span></h2>
+            <img src={imageUri + qData.image} alt="" />
             <ul>
                 {
                     qData.options.map(
